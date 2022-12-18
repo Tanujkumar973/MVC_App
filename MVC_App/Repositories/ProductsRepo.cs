@@ -11,7 +11,8 @@ namespace MVC_App.Repositories
         {
             try
             {
-                using (var connection = new SqlConnection("data source=tanujsqldatabase.database.windows.net; database= appdb; user id =admin123; password = intelCOREi78thGen"))
+                using (
+                    var connection = new SqlConnection("data source=tanujsqldatabase.database.windows.net; database= appdb; user id =admin123; password = intelCOREi78thGen"))
                 {
                     var productsLst = connection.Query<Product>("select * from tblproducts").ToList();
                     return productsLst;
