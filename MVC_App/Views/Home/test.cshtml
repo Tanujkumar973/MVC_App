@@ -1,0 +1,23 @@
+﻿@model List<Product> 
+@{
+    ViewData["Title"] = "test";
+}
+<h1>@ViewData["Title"]</h1>
+<h2>productss</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.prodId</td>
+            <td>@item.prodName</td>
+            <td>@item.quantity</td>
+        </tr>
+    }
+
+</table>
